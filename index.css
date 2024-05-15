@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    padding: 25px;
+    max-width: 900px;
+}
+
+.welcome {
+    padding-bottom: 30px;
+}
+
+.welcome:after {
+    display: block;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.welcome .welcome-text {
+    font-size: 60px;
+    text-align: center;
+}
+
+.note-container {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note-component {
+    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    transform: rotate(-2deg);
+    animation: comeFromBottomAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes comeFromBottomAnimation {
+    0% {
+        top: 50px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.note-component .shadow {
+    background-color: #EEEEEE;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.note-component .paper-note {
+    background-color: #FFE9BF;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.note-component .photo-container {
+    width: 160px;
+    height: 160px;
+    position: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 8px;
+    background-color: white;
+}
+
+.note-component .photo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.note-component .name {
+    position: inherit;
+    font-size: 34px;
+    padding: 30px;
+}
+
+.note-component .tape {
+    display: block;
+    width: 50px;
+    height: 80px;
+    background-color: #FFF8B5;
+    position: relative;
+    top: -30px;
+}
+
+.info-text {
+    font-size: 26px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.info-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.history, .skills, .exp {
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.find-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.find-icons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+
+.find-icons a:last-child {
+    margin: 0;
+}
+
+.find-icons a img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .note-component .photo-container {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: -20px;
+    }
+
+    .note-component .name {
+        font-size: 44px;
+        padding-top: 0;
+    }
+
+    .welcome .welcome-text {
+        font-size: 64px;
+    }
+
+    .info-text {
+        font-size: 29px;
+        margin-bottom: 45px;
+    }
+
+    .info-title {
+        font-size: 36px;
+    }
+
+    .note-container {
+        margin-bottom: 60px;
+    }
+
+    .find-icons a {
+        width: 60px;
+        height: 60px;
+        margin-right: 30px;
+    }
+}
